@@ -40,7 +40,7 @@ Web application to handle guest check-ins, manage room assignments, and display 
 
 ## 6: Handle Form Submission
 
-- [] Assign form submission behaviors
+- [X] Assign form submission behaviors
   - [X] Validate Inputs
   - [X] Check for room availability
   - [X] Add new guest to guest list and dynamically update their display
@@ -52,3 +52,7 @@ Web application to handle guest check-ins, manage room assignments, and display 
 - [X] Write clean, readable, and **commented** code
 - [X] Avoid using external JKS frameworks or libraries for functionality - only things we've learned in class.
 - [X] Upload to GitHub and deploy w/ GitHub Pages
+
+## 8: Maybe add later
+
+- [ ] Valid/Invalid form field styling
