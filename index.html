@@ -23,13 +23,13 @@
   <body>
     <header class="header">
       <!--Span below to incorporate css addition of moon graphic in title behind the W-->
-      <h1 class="header__h1"><span class="moon-letter">W<span>elcome to the Prism Hotel!</h1>
+      <h1 class="header__h1"><span class="moon-letter">W</span>elcome to the Prism Hotel!</h1>
     </header>
 
     <main class="main">
       <section class="check-in">
         <h2 class="main__heading">Check-In Form</h2>
-        <form class="check-in__form">
+        <form class="check-in__form" id="myForm">
           <div class="check-in__field">
             <label for="guestName" class="check-in__label">Guest Name</label>
 
@@ -74,16 +74,16 @@
           <button type="submit" class="check-in__submit">Check In!</button>
         </form>
       </section>
+      <div class="guest-list-h2"> <h2>Guest List</h2> </div>
 
-      <!--Empty container to populate guest list-->
-      <section class="guest-list">
-        <h2>Guest List</h2>
-        <div class="guest-list__container"></div>
-      </section>
+         
+       <!--Empty container to populate guest list cards-->
+      <section class="guest-container" id="parentContainer" style="display: none;"></section>
+      
     </main>
 
     <footer class="footer">
-      <p>You've always been here!</p>
+      <h3 class="footer__h3">You've always been here!</h3>
     </footer>
 
     <script src="./script.js" async defer></script>

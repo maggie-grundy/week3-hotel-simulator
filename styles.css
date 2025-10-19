@@ -2,130 +2,262 @@
 *,
 *::before,
 *::after {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+/* Remove arrows on form inputs */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+body,
 html {
-
+  margin: 0;
+  padding: 0;
+  background-color: #ffeffa;
 }
 
-body {
-
-}
-
-body, html {
-    margin: 0;
-    padding: 0;
-    background-color: #e5e5f7;
-    /* opacity: 0.8;
-    background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#444cf7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
-    background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;background-color: rgb(116, 58, 58);
-*/
-    }
-
-header {
-
-}
-
-main {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-width: 375px;
-    max-width: 500dvh;
-    gap: 20px;
+/* Heading Styles */
+.header__h1 {
+  font-family: "Lobster", serif;
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  /*Linear gradient for Sailor Moon style with transparency for text-shadows*/
+  background: linear-gradient(to top, #fff5a1 0%, #ffb3e6 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  /*Crisp outline*/
+  -webkit-text-stroke: 0.5px #ff66b3;
 }
 
 /* moon svg to sit behind Welcome*/
 .moon-letter {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .moon-letter::before {
-    content: "";
-    position: absolute;
-    left: -1rem;
-    top: -1.5rem;
-    width: 6rem;
-    height: 6rem;
-    background: url(./assets/crescent-moon-svgrepo-com.svg) no-repeat center/contain;
-    z-index: -1;
-    opacity: 0.5;
-    transform: rotate(100deg);
-    
+  content: "";
+  position: absolute;
+  left: -1rem;
+  top: -1.5rem;
+  width: 6rem;
+  height: 6rem;
+  background: url(./assets/crescent-moon-svgrepo-com.svg) no-repeat
+    center/contain;
+  z-index: -1;
+  opacity: 0.5;
+  transform: rotate(100deg);
 }
 
-h1 {
+/*Form heading styles */
+.main__heading {
+  font-family: "Lobster", serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.guest-list-h2  {
+  font-family: "Lobster", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  /*Linear gradient for Sailor Moon style with transparency for text-shadows*/
+  background: linear-gradient(to top, #fff5a1 0%, #ffb3e6 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  /*Crisp outline*/
+  -webkit-text-stroke: 0.5px #ff66b3;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+  .guest-title {
     font-family: "Lobster", serif;
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: black;
     text-align: center;
-    /*Linear gradient for Sailor Moon style with transparency for text-shadows*/
-    background: linear-gradient(to top, #fff5a1 0%, #ffb3e6 70%);
-    -webkit-background-clip: text;
-    color: transparent;
-    /*Crisp outline*/
-    -webkit-text-stroke: .5px #ff66b3;
+  }
+
+/* Layout & Container Styles */
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 375px;
+  max-width: 500dvh;
+  gap: 0.5rem; /* tightened spacing between main children */
 }
 
-
-
-h2 {
-    font-family: "Lobster", serif;
-    font-weight: 400;
+/* Header styles - ensure the "header" selector exists for JS/CSS that queries it */
+header {
+  width: 100%;
+  align-items: center;
+  background: transparent;
 }
 
+/* Footer header style */
+.footer__h3 {
+  margin: 0;
+  font-size: 5rem;
+  font-family: "Lobster", serif;
+  font-size: 5rem;
+  font-weight: 500;
+  text-align: center;
+  background: linear-gradient(to top, #fffef6 0%, #ffd9f2 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/*Check-in wrapper */
 .check-in {
-    background-color: white;
-    text-align: center;
-    gap: 20px;
-    padding: 10px;
-    padding-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: 1.4rem; /* slightly reduced padding to tighten spacing */
+  border-radius: 4rem;
+  margin-bottom: 0px;
 }
 
+/*Check-in form container layout and basic styles */
 .check-in__form {
-     font-family: "Poppins", sans-serif;
-     font-weight: 300;
-     font-style: normal;
-     gap: 20px;
-     display: flex;
-     flex-direction: column;
-
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
+/*Check-in field styles */
+.check-in__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Form label styles */
 .check-in__label {
-     font-family: "Poppins", sans-serif;
-     font-weight: 400;
-     font-style: normal;
-     font-size: 12px;
-    
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-weight: 600;
+  font-size: 0.8rem;
 }
 
+/*Form input styles*/
 .check-in__input {
-     font-family: "Poppins", sans-serif;
-     font-weight: 400;
-     font-style: normal;
-     font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8rem;
 }
 
-.guest-list {
-
+/*Active form input styles*/
+.check-in__input:focus {
+  outline: none;
+  border: 2px solid #ff66b3;
+  box-shadow: 0 0 5px rgba(255, 102, 179, 0.5);
 }
 
-.guest-list__container {
-
+/* Form button styles*/
+.check-in__submit {
+  font-family: "Lobster", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 1rem;
+  color: black;
+  background: linear-gradient(to right, #fff5a1 0%, #ffb3e6 70%);
+  border: none;
+  cursor: pointer;
+}
+/* Button hover style */
+.check-in__submit:hover {
+  background: linear-gradient(to left, #fff5a1 0%, #ffb3e6 70%);
+}
+/* Button active style*/
+.check-in__submit:active {
+  transform: translateY(0.1rem);
 }
 
-/* Dynamically add/update with JS ? */
-.guest-list__card {
+/*Guest List Wrapper */
+.guest-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem; /* slightly tighter gap between cards */
+  width: 90%;
+  max-width: 1000px;
+  min-width: 375px;
+  margin-top: 0px;
 }
 
+/*Guest list div cards*/
+.guestContainer {
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  border-radius: 4rem;
+  padding: 0.8rem 1.8rem; /* tightened padding inside cards */
+  margin: 0.6rem; /* reduced margin so cards sit closer */
+  width: 40%;
+  max-width: 350px;
+  min-width: 250px;
+  min-height: 140px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: .8rem;
+  animation: popIn 0.4s ease forwards;
+  transform-origin: center; 
+  }
+
+  /* pop-in animation for guest cards */
+  @keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Guest list label styles */
+
+.guest-label {
+font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-weight: 600;
+  font-size: .8rem;
+}
+
+/*Footer container */
 .footer {
-
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
