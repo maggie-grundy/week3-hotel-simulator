@@ -1,45 +1,54 @@
 # week3-hotel-simulator
+
 Web application to handle guest check-ins, manage room assignments, and display an organized list of clients staying at a virtual hotel.
 
 ## 1: Create a Hotel Simulator Web Application
-- [x] Design HTML layout styling with:
-  - [x] Check-In Form
-  - [x] Guest List 
-- [x] Make it pretty!
+
+- [X] Design HTML layout styling with:
+  - [X] Check-In Form
+  - [X] Guest List
+- [X] Make it pretty!
 
 ## 2: Implement Check-In Form
+
 - [] Include fields for:
-  - [x] Guest Name (**text input**)
-  - [x] Room Number (**number input**)
-  - [x] Stay Duration (**number input**)
+
+  - [X] Guest Name (**text input**)
+  - [X] Room Number (**number input**)
+  - [X] Stay Duration (**number input**)
+
   - [] *Optional* Whatever else I'd like to add
-- [x] Add **validation** to ensure all fields are filled before submission
+
+- [X] Add **validation** to ensure all fields are filled before submission
 
 ## 3: Add Room Availability Logic
-- [x] Use JS to ensure no two guests can be checked into the same room
-- [x] If a room is occupied - display an error message prompting the user to select a different room (can be *alert*, *badge*, *simple message*)
+
+- [X] Use JS to ensure no two guests can be checked into the same room
+- [X] If a room is occupied - display an error message prompting the user to select a different room (can be *alert*, *badge*, *simple message*)
 
 ## 4: Display Guest List
-- [] Dynamically render a list of guests using JS. Each guest should be displayed in a card format showing:
-  - [] Guest Name
-  - [] Room Number
-  - [] Stay Duration
+
+- [X] Dynamically render a list of guests using JS. Each guest should be displayed in a card format showing:
+
+  - [X] Guest Name
+  - [X] Room Number
+  - [X] Stay Duration
 
 ## 5: Prepopulate the Guest List
-- [] Use JS array to store initial guest data and render it upon page load
+
+- [X] Use JS array to store initial guest data and render it upon page load
 
 ## 6: Handle Form Submission
+
 - [] Assign form submission behaviors
-  - [x] Validate Inputs
-  - [x] Check for room availability
-  - [x] Add new guest to guest list and dynamically update their display
-  - [x] Clear form inputs
+  - [X] Validate Inputs
+  - [X] Check for room availability
+  - [X] Add new guest to guest list and dynamically update their display
+  - [X] Clear form inputs
 
 ## 7: Code Requirements
-- [x] Use a constructor function to create Guest Objects
-- [x] Write clean, readable, and **commented** code
-- [x] Avoid using external JKS frameworks or libraries for functionality - only things we've learned in class.
 
-
-- [] Upload to GitHub and deploy w/ GitHub Pages
-  
+- [X] Use a constructor function to create Guest Objects
+- [X] Write clean, readable, and **commented** code
+- [X] Avoid using external JKS frameworks or libraries for functionality - only things we've learned in class.
+- [X] Upload to GitHub and deploy w/ GitHub Pages
